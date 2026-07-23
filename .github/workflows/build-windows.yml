@@ -11,6 +11,7 @@ on:
       - "Fruckenstein.spec"
       - "requirements.txt"
       - "src/**"
+      - "scripts/restore_frozen_bytes.py"
       - "seat/**"
       - "duck/**"
 
@@ -26,17 +27,14 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v7
 
-      - name: Restore byte-exact repository files
-        shell: pwsh
-        run: |
-          git config core.autocrlf false
-          git checkout-index --force --all
-
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
+
+      - name: Restore frozen crown bytes
+        run: python scripts/restore_frozen_bytes.py
 
       - name: Install build dependencies
         run: |
