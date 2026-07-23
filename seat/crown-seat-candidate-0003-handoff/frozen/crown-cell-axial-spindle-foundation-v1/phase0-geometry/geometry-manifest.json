@@ -1,0 +1,3911 @@
+{
+  "schemaVersion": "folded-twelve-member-crown-spindle-contract/2.0.0",
+  "lineage": "folded-twelve-member-crown-spindle-unit-v1",
+  "artifactName": "H0 crown-spindle geometry candidate",
+  "scientificName": "folded twelve-member crown-spindle unit",
+  "lineageAliases": [
+    "folded twelve-member crown",
+    "interpenetrating five-plus-one cells"
+  ],
+  "phase": "phase-0-count-and-geometry-contract",
+  "status": "phase0-owner-approved-and-frozen",
+  "approval": {
+    "geometryApprovalStatus": "owner-approved",
+    "owner": "V",
+    "ownerConfirmationDate": "2026-07-15",
+    "approvedScope": [
+      "count",
+      "topology",
+      "orientation",
+      "geometry"
+    ],
+    "notApproved": [
+      "dynamical law",
+      "dynamical parameter values",
+      "containment claim",
+      "hydrogen interpretation",
+      "atomic interpretation",
+      "matter interpretation",
+      "photon interpretation",
+      "electron interpretation",
+      "hidden-seed evaluation"
+    ],
+    "countLock": true,
+    "terminologyLock": true,
+    "pressureFunnelContractAddedBeforePhase0Lock": true,
+    "phase0Frozen": true,
+    "publicPhase1DevelopmentAuthorized": true,
+    "hiddenSeedEvaluationAuthorized": false
+  },
+  "scope": {
+    "geometryOnly": true,
+    "behavioralCohortRun": false,
+    "hiddenSeedsCreatedOrOpened": false,
+    "reusesFoldedCrownHiddenSeeds": false,
+    "modifiesFrozenContinuousCrown": false,
+    "claimsHydrogen": false,
+    "claimsMatterModel": false,
+    "claim": "owner-approved frozen geometry and pressure-funnel interface contract only"
+  },
+  "terminology": {
+    "preferredShortName": "folded twelve-member crown",
+    "preferredStructuralName": "interpenetrating five-plus-one cells",
+    "notATwelveSpireGeometry": true,
+    "explanation": "Twelve counts total cell members: ten peripheral vortex-funnels plus two mobile eyes."
+  },
+  "countSemantics": {
+    "cellCount": 2,
+    "cellMemberCount": 6,
+    "totalCellMemberCount": 12,
+    "spireCount": 10,
+    "peripheralFunnelCount": 10,
+    "peripheralCrownCount": 2,
+    "peripheralMemberCountPerCrown": 5,
+    "mobileCoreCount": 2,
+    "spineNodeCount": 3,
+    "spineLinkCount": 2,
+    "hingeCount": 1,
+    "nipCount": 2,
+    "integratedWholeCount": 1,
+    "note": "The two mobile eyes are the sixth members of their cells and also the upper/lower nodes of the three-node spine. The central junction is a hinge, not a thirteenth cell member. The final one is a derived apparent axis, not an additional node."
+  },
+  "cells": [
+    {
+      "id": "upper-cell",
+      "orientation": "upright",
+      "memberCount": 6,
+      "peripheralFunnelIds": [
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5"
+      ],
+      "mobileCoreId": "upper-eye",
+      "candidateHandednessRule": "five compatible right-handed flows in transported local frames"
+    },
+    {
+      "id": "lower-cell",
+      "orientation": "inverted",
+      "memberCount": 6,
+      "peripheralFunnelIds": [
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5"
+      ],
+      "mobileCoreId": "lower-eye",
+      "candidateHandednessRule": "five compatible left-handed flows in transported local frames"
+    }
+  ],
+  "peripheralFunnels": [
+    {
+      "id": "U1",
+      "cell": "upper",
+      "peripheralIndex": 0,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": 1,
+      "handednessName": "right",
+      "centerline": {
+        "symbol": "c_U1(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            1.36,
+            0.0,
+            0.02
+          ],
+          [
+            0.38,
+            0.5,
+            -0.46
+          ],
+          [
+            0.0,
+            0.0,
+            0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_U1(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_U1(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          -0.8891358104,
+          0.0,
+          0.4576434318
+        ],
+        "normal": [
+          0.397376584,
+          -0.4960210935,
+          0.7720459347
+        ],
+        "binormal": [
+          0.2270007955,
+          0.8683104714,
+          0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        -0.8891358104,
+        0.0,
+        0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            1.36,
+            0.0,
+            0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              -0.8164399093,
+              0.4165509741,
+              -0.3998889352
+            ],
+            "normal": [
+              -0.5309392746,
+              -0.2692994823,
+              0.803480725
+            ],
+            "binormal": [
+              0.2270007955,
+              0.8683104714,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            -0.8164399093,
+            0.4165509741,
+            -0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": 0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": 0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            0.9075,
+            0.1875,
+            -0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              -0.9548275322,
+              0.2875986543,
+              -0.0747756501
+            ],
+            "normal": [
+              -0.1917681481,
+              -0.4041335661,
+              0.8943718679
+            ],
+            "binormal": [
+              0.2270007955,
+              0.8683104714,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            -0.9548275322,
+            0.2875986543,
+            -0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": 0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": 0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            0.53,
+            0.25,
+            -0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              -0.8891358104,
+              0.0,
+              0.4576434318
+            ],
+            "normal": [
+              0.397376584,
+              -0.4960210935,
+              0.7720459347
+            ],
+            "binormal": [
+              0.2270007955,
+              0.8683104714,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            -0.8891358104,
+            0.0,
+            0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": 0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": 0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            0.2275,
+            0.1875,
+            0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              -0.5499911281,
+              -0.2594297774,
+              0.7938551188
+            ],
+            "normal": [
+              0.8037290575,
+              -0.422768395,
+              0.4186722898
+            ],
+            "binormal": [
+              0.2270007955,
+              0.8683104714,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            -0.5499911281,
+            -0.2594297774,
+            0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": 0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": 0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            0.0395,
+            0.0475,
+            0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              -0.326798648,
+              -0.3586814429,
+              0.8743856507
+            ],
+            "normal": [
+              0.9174275353,
+              -0.3426142842,
+              0.2023417152
+            ],
+            "binormal": [
+              0.2270007955,
+              0.8683104714,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            -0.326798648,
+            -0.3586814429,
+            0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": 0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": 0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "U2",
+      "cell": "upper",
+      "peripheralIndex": 1,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": 1,
+      "handednessName": "right",
+      "centerline": {
+        "symbol": "c_U2(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            0.4202631123,
+            1.2934368622,
+            0.02
+          ],
+          [
+            -0.3581018003,
+            0.5159099734,
+            -0.46
+          ],
+          [
+            0.0,
+            0.0,
+            0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_U2(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_U2(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          -0.2747580757,
+          -0.8456184063,
+          0.4576434318
+        ],
+        "normal": [
+          0.5945402108,
+          0.2246486422,
+          0.7720459347
+        ],
+        "binormal": [
+          -0.7556652285,
+          0.4842132778,
+          0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        -0.2747580757,
+        -0.8456184063,
+        0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            0.4202631123,
+            1.2934368622,
+            0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              -0.6484573252,
+              -0.6477591659,
+              -0.3998889352
+            ],
+            "normal": [
+              0.0920497686,
+              -0.5881713735,
+              0.803480725
+            ],
+            "binormal": [
+              -0.7556652285,
+              0.4842132778,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            -0.6484573252,
+            -0.6477591659,
+            -0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": 0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": 0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            0.1021098256,
+            0.921024475,
+            -0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              -0.5685805084,
+              -0.8192220747,
+              -0.0747756501
+            ],
+            "normal": [
+              0.3250942448,
+              -0.3072664868,
+              0.8943718679
+            ],
+            "binormal": [
+              -0.7556652285,
+              0.4842132778,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            -0.5685805084,
+            -0.8192220747,
+            -0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": 0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": 0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            -0.0739851221,
+            0.5813142022,
+            -0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              -0.2747580757,
+              -0.8456184063,
+              0.4576434318
+            ],
+            "normal": [
+              0.5945402108,
+              0.2246486422,
+              0.7720459347
+            ],
+            "binormal": [
+              -0.7556652285,
+              0.4842132778,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            -0.2747580757,
+            -0.8456184063,
+            0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": 0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": 0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            -0.1080217306,
+            0.2743060439,
+            0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              0.076775775,
+              -0.6032408563,
+              0.7938551188
+            ],
+            "normal": [
+              0.6504425746,
+              0.6337491387,
+              0.4186722898
+            ],
+            "binormal": [
+              -0.7556652285,
+              0.4842132778,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            0.076775775,
+            -0.6032408563,
+            0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": 0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": 0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            -0.0329690132,
+            0.0522450396,
+            0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              0.2401399876,
+              -0.4216426451,
+              0.8743856507
+            ],
+            "normal": [
+              0.6093462471,
+              0.7666517993,
+              0.2023417152
+            ],
+            "binormal": [
+              -0.7556652285,
+              0.4842132778,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            0.2401399876,
+            -0.4216426451,
+            0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": 0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": 0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "U3",
+      "cell": "upper",
+      "peripheralIndex": 2,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": 1,
+      "handednessName": "right",
+      "centerline": {
+        "symbol": "c_U3(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            -1.1002631123,
+            0.7993879431,
+            0.02
+          ],
+          [
+            -0.601319084,
+            -0.1811501013,
+            -0.46
+          ],
+          [
+            0.0,
+            0.0,
+            0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_U3(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_U3(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          0.7193259809,
+          -0.5226209166,
+          0.4576434318
+        ],
+        "normal": [
+          -0.0299305261,
+          0.6348615899,
+          0.7720459347
+        ],
+        "binormal": [
+          -0.6940275908,
+          -0.5690502079,
+          0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        0.7193259809,
+        -0.5226209166,
+        0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            -1.1002631123,
+            0.7993879431,
+            0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              0.4156712421,
+              -0.8168881552,
+              -0.3998889352
+            ],
+            "normal": [
+              0.5878291603,
+              -0.0942104178,
+              0.803480725
+            ],
+            "binormal": [
+              -0.6940275908,
+              -0.5690502079,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            0.4156712421,
+            -0.8168881552,
+            -0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": 0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": 0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            -0.8443926572,
+            0.38172443,
+            -0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              0.6034254527,
+              -0.7939057408,
+              -0.0747756501
+            ],
+            "normal": [
+              0.3926874409,
+              0.2142324337,
+              0.8943718679
+            ],
+            "binormal": [
+              -0.6940275908,
+              -0.5690502079,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            0.6034254527,
+            -0.7939057408,
+            -0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": 0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": 0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            -0.5757253201,
+            0.1092719351,
+            -0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              0.7193259809,
+              -0.5226209166,
+              0.4576434318
+            ],
+            "normal": [
+              -0.0299305261,
+              0.6348615899,
+              0.7720459347
+            ],
+            "binormal": [
+              -0.6940275908,
+              -0.5690502079,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            0.7193259809,
+            -0.5226209166,
+            0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": 0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": 0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            -0.294261101,
+            -0.0179695415,
+            0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              0.5974411665,
+              -0.1133935752,
+              0.7938551188
+            ],
+            "normal": [
+              -0.4017334387,
+              0.8144469031,
+              0.4186722898
+            ],
+            "binormal": [
+              -0.6940275908,
+              -0.5690502079,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            0.5974411665,
+            -0.1133935752,
+            0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": 0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": 0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            -0.0598759708,
+            -0.0152107898,
+            0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              0.4752133223,
+              0.0980919571,
+              0.8743856507
+            ],
+            "normal": [
+              -0.5408308437,
+              0.8164311537,
+              0.2023417152
+            ],
+            "binormal": [
+              -0.6940275908,
+              -0.5690502079,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            0.4752133223,
+            0.0980919571,
+            0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": 0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": 0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "U4",
+      "cell": "upper",
+      "peripheralIndex": 3,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": 1,
+      "handednessName": "right",
+      "centerline": {
+        "symbol": "c_U4(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            -1.1002631123,
+            -0.7993879431,
+            0.02
+          ],
+          [
+            -0.0135338317,
+            -0.6278668931,
+            -0.46
+          ],
+          [
+            0.0,
+            0.0,
+            0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_U4(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_U4(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          0.7193259809,
+          0.5226209166,
+          0.4576434318
+        ],
+        "normal": [
+          -0.6130382932,
+          0.1677173985,
+          0.7720459347
+        ],
+        "binormal": [
+          0.3267325882,
+          -0.8359056476,
+          0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        0.7193259809,
+        0.5226209166,
+        0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            -1.1002631123,
+            -0.7993879431,
+            0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              0.9053562809,
+              0.142894521,
+              -0.3998889352
+            ],
+            "normal": [
+              0.271248632,
+              0.5299461332,
+              0.803480725
+            ],
+            "binormal": [
+              0.3267325882,
+              -0.8359056476,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            0.9053562809,
+            0.142894521,
+            -0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": 0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": 0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            -0.6239731876,
+            -0.6851058029,
+            -0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              0.9415179478,
+              0.328561343,
+              -0.0747756501
+            ],
+            "normal": [
+              -0.0824000593,
+              0.4396694123,
+              0.8943718679
+            ],
+            "binormal": [
+              0.3267325882,
+              -0.8359056476,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            0.9415179478,
+            0.328561343,
+            -0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": 0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": 0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            -0.2818326939,
+            -0.5137804323,
+            -0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              0.7193259809,
+              0.5226209166,
+              0.4576434318
+            ],
+            "normal": [
+              -0.6130382932,
+              0.1677173985,
+              0.7720459347
+            ],
+            "binormal": [
+              0.3267325882,
+              -0.8359056476,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            0.7193259809,
+            0.5226209166,
+            0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": 0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": 0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            -0.0738416314,
+            -0.2854118313,
+            0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              0.2924631722,
+              0.5331597727,
+              0.7938551188
+            ],
+            "normal": [
+              -0.8987274941,
+              -0.1303932706,
+              0.4186722898
+            ],
+            "binormal": [
+              0.3267325882,
+              -0.8359056476,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            0.2924631722,
+            0.5331597727,
+            0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": 0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": 0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            -0.0040363718,
+            -0.0616458247,
+            0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              0.0535579975,
+              0.4822668086,
+              0.8743856507
+            ],
+            "normal": [
+              -0.9435980907,
+              -0.2620695969,
+              0.2023417152
+            ],
+            "binormal": [
+              0.3267325882,
+              -0.8359056476,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            0.0535579975,
+            0.4822668086,
+            0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": 0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": 0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "U5",
+      "cell": "upper",
+      "peripheralIndex": 4,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": 1,
+      "handednessName": "right",
+      "centerline": {
+        "symbol": "c_U5(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            0.4202631123,
+            -1.2934368622,
+            0.02
+          ],
+          [
+            0.592954716,
+            -0.206892979,
+            -0.46
+          ],
+          [
+            0.0,
+            0.0,
+            0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_U5(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_U5(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          -0.2747580757,
+          0.8456184063,
+          0.4576434318
+        ],
+        "normal": [
+          -0.3489479756,
+          -0.5312065371,
+          0.7720459347
+        ],
+        "binormal": [
+          0.8959594356,
+          0.0524321063,
+          0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        -0.2747580757,
+        0.8456184063,
+        0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            0.4202631123,
+            -1.2934368622,
+            0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              0.1438697115,
+              0.9052018259,
+              -0.3998889352
+            ],
+            "normal": [
+              -0.4201882863,
+              0.4217351403,
+              0.803480725
+            ],
+            "binormal": [
+              0.8959594356,
+              0.0524321063,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            0.1438697115,
+            0.9052018259,
+            -0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": 0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": 0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            0.4587560192,
+            -0.8051431021,
+            -0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              -0.0215353599,
+              0.9969678181,
+              -0.0747756501
+            ],
+            "normal": [
+              -0.4436134783,
+              0.057498207,
+              0.8943718679
+            ],
+            "binormal": [
+              0.8959594356,
+              0.0524321063,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            -0.0215353599,
+            0.9969678181,
+            -0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": 0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": 0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            0.4015431361,
+            -0.426805705,
+            -0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              -0.2747580757,
+              0.8456184063,
+              0.4576434318
+            ],
+            "normal": [
+              -0.3489479756,
+              -0.5312065371,
+              0.7720459347
+            ],
+            "binormal": [
+              0.8959594356,
+              0.0524321063,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            -0.2747580757,
+            0.8456184063,
+            0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": 0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": 0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            0.248624463,
+            -0.158424671,
+            0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              -0.4166889856,
+              0.4429044362,
+              0.7938551188
+            ],
+            "normal": [
+              -0.1537106993,
+              -0.8950343762,
+              0.4186722898
+            ],
+            "binormal": [
+              0.8959594356,
+              0.0524321063,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            -0.4166889856,
+            0.4429044362,
+            0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": 0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": 0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            0.0573813558,
+            -0.0228884252,
+            0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              -0.4421126595,
+              0.1999653222,
+              0.8743856507
+            ],
+            "normal": [
+              -0.0423448481,
+              -0.978399072,
+              0.2023417152
+            ],
+            "binormal": [
+              0.8959594356,
+              0.0524321063,
+              0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            -0.4421126595,
+            0.1999653222,
+            0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": 0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": 0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "L1",
+      "cell": "lower",
+      "peripheralIndex": 0,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": -1,
+      "handednessName": "left",
+      "centerline": {
+        "symbol": "c_L1(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            1.1002631123,
+            0.7993879431,
+            -0.02
+          ],
+          [
+            0.601319084,
+            -0.1811501013,
+            0.46
+          ],
+          [
+            0.0,
+            0.0,
+            -0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_L1(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_L1(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          -0.7193259809,
+          -0.5226209166,
+          -0.4576434318
+        ],
+        "normal": [
+          0.0299305261,
+          0.6348615899,
+          -0.7720459347
+        ],
+        "binormal": [
+          0.6940275908,
+          -0.5690502079,
+          -0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        -0.7193259809,
+        -0.5226209166,
+        -0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            1.1002631123,
+            0.7993879431,
+            -0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              -0.4156712421,
+              -0.8168881552,
+              0.3998889352
+            ],
+            "normal": [
+              -0.5878291603,
+              -0.0942104178,
+              -0.803480725
+            ],
+            "binormal": [
+              0.6940275908,
+              -0.5690502079,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            -0.4156712421,
+            -0.8168881552,
+            0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": -0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": -0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            0.8443926572,
+            0.38172443,
+            0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              -0.6034254527,
+              -0.7939057408,
+              0.0747756501
+            ],
+            "normal": [
+              -0.3926874409,
+              0.2142324337,
+              -0.8943718679
+            ],
+            "binormal": [
+              0.6940275908,
+              -0.5690502079,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            -0.6034254527,
+            -0.7939057408,
+            0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": -0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": -0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            0.5757253201,
+            0.1092719351,
+            0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              -0.7193259809,
+              -0.5226209166,
+              -0.4576434318
+            ],
+            "normal": [
+              0.0299305261,
+              0.6348615899,
+              -0.7720459347
+            ],
+            "binormal": [
+              0.6940275908,
+              -0.5690502079,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            -0.7193259809,
+            -0.5226209166,
+            -0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": -0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": -0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            0.294261101,
+            -0.0179695415,
+            -0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              -0.5974411665,
+              -0.1133935752,
+              -0.7938551188
+            ],
+            "normal": [
+              0.4017334387,
+              0.8144469031,
+              -0.4186722898
+            ],
+            "binormal": [
+              0.6940275908,
+              -0.5690502079,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            -0.5974411665,
+            -0.1133935752,
+            -0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": -0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": -0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            0.0598759708,
+            -0.0152107898,
+            -0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              -0.4752133223,
+              0.0980919571,
+              -0.8743856507
+            ],
+            "normal": [
+              0.5408308437,
+              0.8164311537,
+              -0.2023417152
+            ],
+            "binormal": [
+              0.6940275908,
+              -0.5690502079,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            -0.4752133223,
+            0.0980919571,
+            -0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": -0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": -0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "L2",
+      "cell": "lower",
+      "peripheralIndex": 1,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": -1,
+      "handednessName": "left",
+      "centerline": {
+        "symbol": "c_L2(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            -0.4202631123,
+            1.2934368622,
+            -0.02
+          ],
+          [
+            0.3581018003,
+            0.5159099734,
+            0.46
+          ],
+          [
+            0.0,
+            0.0,
+            -0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_L2(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_L2(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          0.2747580757,
+          -0.8456184063,
+          -0.4576434318
+        ],
+        "normal": [
+          -0.5945402108,
+          0.2246486422,
+          -0.7720459347
+        ],
+        "binormal": [
+          0.7556652285,
+          0.4842132778,
+          -0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        0.2747580757,
+        -0.8456184063,
+        -0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            -0.4202631123,
+            1.2934368622,
+            -0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              0.6484573252,
+              -0.6477591659,
+              0.3998889352
+            ],
+            "normal": [
+              -0.0920497686,
+              -0.5881713735,
+              -0.803480725
+            ],
+            "binormal": [
+              0.7556652285,
+              0.4842132778,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            0.6484573252,
+            -0.6477591659,
+            0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": -0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": -0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            -0.1021098256,
+            0.921024475,
+            0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              0.5685805084,
+              -0.8192220747,
+              0.0747756501
+            ],
+            "normal": [
+              -0.3250942448,
+              -0.3072664868,
+              -0.8943718679
+            ],
+            "binormal": [
+              0.7556652285,
+              0.4842132778,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            0.5685805084,
+            -0.8192220747,
+            0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": -0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": -0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            0.0739851221,
+            0.5813142022,
+            0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              0.2747580757,
+              -0.8456184063,
+              -0.4576434318
+            ],
+            "normal": [
+              -0.5945402108,
+              0.2246486422,
+              -0.7720459347
+            ],
+            "binormal": [
+              0.7556652285,
+              0.4842132778,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            0.2747580757,
+            -0.8456184063,
+            -0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": -0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": -0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            0.1080217306,
+            0.2743060439,
+            -0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              -0.076775775,
+              -0.6032408563,
+              -0.7938551188
+            ],
+            "normal": [
+              -0.6504425746,
+              0.6337491387,
+              -0.4186722898
+            ],
+            "binormal": [
+              0.7556652285,
+              0.4842132778,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            -0.076775775,
+            -0.6032408563,
+            -0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": -0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": -0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            0.0329690132,
+            0.0522450396,
+            -0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              -0.2401399876,
+              -0.4216426451,
+              -0.8743856507
+            ],
+            "normal": [
+              -0.6093462471,
+              0.7666517993,
+              -0.2023417152
+            ],
+            "binormal": [
+              0.7556652285,
+              0.4842132778,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            -0.2401399876,
+            -0.4216426451,
+            -0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": -0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": -0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "L3",
+      "cell": "lower",
+      "peripheralIndex": 2,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": -1,
+      "handednessName": "left",
+      "centerline": {
+        "symbol": "c_L3(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            -1.36,
+            0.0,
+            -0.02
+          ],
+          [
+            -0.38,
+            0.5,
+            0.46
+          ],
+          [
+            0.0,
+            0.0,
+            -0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_L3(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_L3(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          0.8891358104,
+          0.0,
+          -0.4576434318
+        ],
+        "normal": [
+          -0.397376584,
+          -0.4960210935,
+          -0.7720459347
+        ],
+        "binormal": [
+          -0.2270007955,
+          0.8683104714,
+          -0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        0.8891358104,
+        0.0,
+        -0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            -1.36,
+            0.0,
+            -0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              0.8164399093,
+              0.4165509741,
+              0.3998889352
+            ],
+            "normal": [
+              0.5309392746,
+              -0.2692994823,
+              -0.803480725
+            ],
+            "binormal": [
+              -0.2270007955,
+              0.8683104714,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            0.8164399093,
+            0.4165509741,
+            0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": -0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": -0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            -0.9075,
+            0.1875,
+            0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              0.9548275322,
+              0.2875986543,
+              0.0747756501
+            ],
+            "normal": [
+              0.1917681481,
+              -0.4041335661,
+              -0.8943718679
+            ],
+            "binormal": [
+              -0.2270007955,
+              0.8683104714,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            0.9548275322,
+            0.2875986543,
+            0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": -0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": -0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            -0.53,
+            0.25,
+            0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              0.8891358104,
+              0.0,
+              -0.4576434318
+            ],
+            "normal": [
+              -0.397376584,
+              -0.4960210935,
+              -0.7720459347
+            ],
+            "binormal": [
+              -0.2270007955,
+              0.8683104714,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            0.8891358104,
+            0.0,
+            -0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": -0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": -0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            -0.2275,
+            0.1875,
+            -0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              0.5499911281,
+              -0.2594297774,
+              -0.7938551188
+            ],
+            "normal": [
+              -0.8037290575,
+              -0.422768395,
+              -0.4186722898
+            ],
+            "binormal": [
+              -0.2270007955,
+              0.8683104714,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            0.5499911281,
+            -0.2594297774,
+            -0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": -0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": -0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            -0.0395,
+            0.0475,
+            -0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              0.326798648,
+              -0.3586814429,
+              -0.8743856507
+            ],
+            "normal": [
+              -0.9174275353,
+              -0.3426142842,
+              -0.2023417152
+            ],
+            "binormal": [
+              -0.2270007955,
+              0.8683104714,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            0.326798648,
+            -0.3586814429,
+            -0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": -0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": -0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "L4",
+      "cell": "lower",
+      "peripheralIndex": 3,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": -1,
+      "handednessName": "left",
+      "centerline": {
+        "symbol": "c_L4(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            -0.4202631123,
+            -1.2934368622,
+            -0.02
+          ],
+          [
+            -0.592954716,
+            -0.206892979,
+            0.46
+          ],
+          [
+            0.0,
+            0.0,
+            -0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_L4(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_L4(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          0.2747580757,
+          0.8456184063,
+          -0.4576434318
+        ],
+        "normal": [
+          0.3489479756,
+          -0.5312065371,
+          -0.7720459347
+        ],
+        "binormal": [
+          -0.8959594356,
+          0.0524321063,
+          -0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        0.2747580757,
+        0.8456184063,
+        -0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            -0.4202631123,
+            -1.2934368622,
+            -0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              -0.1438697115,
+              0.9052018259,
+              0.3998889352
+            ],
+            "normal": [
+              0.4201882863,
+              0.4217351403,
+              -0.803480725
+            ],
+            "binormal": [
+              -0.8959594356,
+              0.0524321063,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            -0.1438697115,
+            0.9052018259,
+            0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": -0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": -0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            -0.4587560192,
+            -0.8051431021,
+            0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              0.0215353599,
+              0.9969678181,
+              0.0747756501
+            ],
+            "normal": [
+              0.4436134783,
+              0.057498207,
+              -0.8943718679
+            ],
+            "binormal": [
+              -0.8959594356,
+              0.0524321063,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            0.0215353599,
+            0.9969678181,
+            0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": -0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": -0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            -0.4015431361,
+            -0.426805705,
+            0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              0.2747580757,
+              0.8456184063,
+              -0.4576434318
+            ],
+            "normal": [
+              0.3489479756,
+              -0.5312065371,
+              -0.7720459347
+            ],
+            "binormal": [
+              -0.8959594356,
+              0.0524321063,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            0.2747580757,
+            0.8456184063,
+            -0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": -0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": -0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            -0.248624463,
+            -0.158424671,
+            -0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              0.4166889856,
+              0.4429044362,
+              -0.7938551188
+            ],
+            "normal": [
+              0.1537106993,
+              -0.8950343762,
+              -0.4186722898
+            ],
+            "binormal": [
+              -0.8959594356,
+              0.0524321063,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            0.4166889856,
+            0.4429044362,
+            -0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": -0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": -0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            -0.0573813558,
+            -0.0228884252,
+            -0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              0.4421126595,
+              0.1999653222,
+              -0.8743856507
+            ],
+            "normal": [
+              0.0423448481,
+              -0.978399072,
+              -0.2023417152
+            ],
+            "binormal": [
+              -0.8959594356,
+              0.0524321063,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            0.4421126595,
+            0.1999653222,
+            -0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": -0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": -0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    },
+    {
+      "id": "L5",
+      "cell": "lower",
+      "peripheralIndex": 4,
+      "memberRole": "peripheral-vortex-funnel",
+      "handedness": -1,
+      "handednessName": "left",
+      "centerline": {
+        "symbol": "c_L5(s)",
+        "parameterDomain": [
+          0.0,
+          1.0
+        ],
+        "orientation": "outer-boundary-at-s=0 toward reference-eye-at-s=1",
+        "curveType": "quadratic-bezier",
+        "controlPoints": [
+          [
+            1.1002631123,
+            -0.7993879431,
+            -0.02
+          ],
+          [
+            0.0135338317,
+            -0.6278668931,
+            0.46
+          ],
+          [
+            0.0,
+            0.0,
+            -0.72
+          ]
+        ],
+        "equation": "c(s)=(1-s)^2*p0+2*(1-s)*s*p1+s^2*p2"
+      },
+      "funnelRadius": {
+        "symbol": "R_L5(s)",
+        "equation": "R(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+        "parameters": {
+          "R_outer": 0.22,
+          "R_eye": 0.055,
+          "alpha": 1.35
+        },
+        "broadensTowardOuterBoundary": true,
+        "narrowsTowardReferenceEye": true
+      },
+      "pressurePotential": {
+        "symbol": "P_L5(s,rho)",
+        "equation": "P(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R(s))^2",
+        "parameters": {
+          "P_eye": 0.0,
+          "DeltaP": 1.0,
+          "k_rho": 0.42
+        },
+        "forceDensityDefinition": "f=-gradient(P) in the transported local frame",
+        "longitudinalInwardComponent": "-dP/ds times gradient(s); on the centerline it points along +T toward increasing s",
+        "radialConfinementComponent": "-dP/drho times e_rho; it points toward rho=0",
+        "directEyeForceVectorUsed": false
+      },
+      "flowField": {
+        "velocityDecomposition": "v=u_parallel*T+u_helix*e_phi",
+        "longitudinalComponent": "u_parallel=u0*(R_outer/R(s))^2*(1-(rho/R(s))^2)",
+        "helicalComponent": "u_helix=h*omega0*rho*(1-(rho/R(s))^2)",
+        "handednessSymbol": "h",
+        "parameters": {
+          "u0": 0.18,
+          "omega0": 1.4,
+          "massDensity": 1.0
+        }
+      },
+      "energyMomentumDensity": {
+        "momentumDensity": "pi=rho_mass*v",
+        "kineticEnergyDensity": "e_k=0.5*rho_mass*dot(v,v)",
+        "totalReducedEnergyDensity": "e_total=P+e_k",
+        "units": "declared reduced simulation units; Phase 1 must log injection, damping, and loss separately"
+      },
+      "representativeFrameAtS": 0.5,
+      "localFrame": {
+        "tangent": [
+          -0.7193259809,
+          0.5226209166,
+          -0.4576434318
+        ],
+        "normal": [
+          0.6130382932,
+          0.1677173985,
+          -0.7720459347
+        ],
+        "binormal": [
+          -0.3267325882,
+          -0.8359056476,
+          -0.4410301169
+        ],
+        "definition": "right-handed transported frame F=[T,N,B] evaluated along c(s)"
+      },
+      "onAxisInwardPressureGradientDirection": [
+        -0.7193259809,
+        0.5226209166,
+        -0.4576434318
+      ],
+      "fieldSamples": [
+        {
+          "s": 0.0,
+          "centerlinePosition": [
+            1.1002631123,
+            -0.7993879431,
+            -0.02
+          ],
+          "radius": 0.22,
+          "frame": {
+            "tangent": [
+              -0.9053562809,
+              0.142894521,
+              0.3998889352
+            ],
+            "normal": [
+              -0.271248632,
+              0.5299461332,
+              -0.803480725
+            ],
+            "binormal": [
+              -0.3267325882,
+              -0.8359056476,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 1.0,
+          "onAxisInwardPressureGradientDirection": [
+            -0.9053562809,
+            0.142894521,
+            0.3998889352
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.135,
+            "helical": -0.1155,
+            "momentumDensityLongitudinal": 0.135,
+            "momentumDensityHelical": -0.1155,
+            "kineticEnergyDensity": 0.015782625,
+            "totalReducedEnergyDensity": 1.068282625
+          }
+        },
+        {
+          "s": 0.25,
+          "centerlinePosition": [
+            0.6239731876,
+            -0.6851058029,
+            0.11625
+          ],
+          "radius": 0.166896538,
+          "frame": {
+            "tangent": [
+              -0.9415179478,
+              0.328561343,
+              0.0747756501
+            ],
+            "normal": [
+              0.0824000593,
+              0.4396694123,
+              -0.8943718679
+            ],
+            "binormal": [
+              -0.3267325882,
+              -0.8359056476,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.75,
+          "onAxisInwardPressureGradientDirection": [
+            -0.9415179478,
+            0.328561343,
+            0.0747756501
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.234576485,
+            "helical": -0.0876206824,
+            "momentumDensityLongitudinal": 0.234576485,
+            "momentumDensityHelical": -0.0876206824,
+            "kineticEnergyDensity": 0.0313517556,
+            "totalReducedEnergyDensity": 0.8338517556
+          }
+        },
+        {
+          "s": 0.5,
+          "centerlinePosition": [
+            0.2818326939,
+            -0.5137804323,
+            0.045
+          ],
+          "radius": 0.1197281881,
+          "frame": {
+            "tangent": [
+              -0.7193259809,
+              0.5226209166,
+              -0.4576434318
+            ],
+            "normal": [
+              0.6130382932,
+              0.1677173985,
+              -0.7720459347
+            ],
+            "binormal": [
+              -0.3267325882,
+              -0.8359056476,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.5,
+          "onAxisInwardPressureGradientDirection": [
+            -0.7193259809,
+            0.5226209166,
+            -0.4576434318
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 0.455812583,
+            "helical": -0.0628572987,
+            "momentumDensityLongitudinal": 0.455812583,
+            "momentumDensityHelical": -0.0628572987,
+            "kineticEnergyDensity": 0.1058580754,
+            "totalReducedEnergyDensity": 0.6583580754
+          }
+        },
+        {
+          "s": 0.75,
+          "centerlinePosition": [
+            0.0738416314,
+            -0.2854118313,
+            -0.23375
+          ],
+          "radius": 0.0803923535,
+          "frame": {
+            "tangent": [
+              -0.2924631722,
+              0.5331597727,
+              -0.7938551188
+            ],
+            "normal": [
+              0.8987274941,
+              -0.1303932706,
+              -0.4186722898
+            ],
+            "binormal": [
+              -0.3267325882,
+              -0.8359056476,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.25,
+          "onAxisInwardPressureGradientDirection": [
+            -0.2924631722,
+            0.5331597727,
+            -0.7938551188
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.0109964813,
+            "helical": -0.0422059856,
+            "momentumDensityLongitudinal": 1.0109964813,
+            "momentumDensityHelical": -0.0422059856,
+            "kineticEnergyDensity": 0.5119476152,
+            "totalReducedEnergyDensity": 0.8144476152
+          }
+        },
+        {
+          "s": 0.95,
+          "centerlinePosition": [
+            0.0040363718,
+            -0.0616458247,
+            -0.60615
+          ],
+          "radius": 0.057891302,
+          "frame": {
+            "tangent": [
+              -0.0535579975,
+              0.4822668086,
+              -0.8743856507
+            ],
+            "normal": [
+              0.9435980907,
+              -0.2620695969,
+              -0.2023417152
+            ],
+            "binormal": [
+              -0.3267325882,
+              -0.8359056476,
+              -0.4410301169
+            ]
+          },
+          "onAxisPotential": 0.05,
+          "onAxisInwardPressureGradientDirection": [
+            -0.0535579975,
+            0.4822668086,
+            -0.8743856507
+          ],
+          "halfRadiusFlow": {
+            "longitudinal": 1.9496313358,
+            "helical": -0.0303929335,
+            "momentumDensityLongitudinal": 1.9496313358,
+            "momentumDensityHelical": -0.0303929335,
+            "kineticEnergyDensity": 1.9009930379,
+            "totalReducedEnergyDensity": 2.0034930379
+          }
+        }
+      ],
+      "overlapFrameTransportRuleId": "local-frame-overlap-transport-v1",
+      "helixTurns": 2.25,
+      "displayHelixRadius": 0.105
+    }
+  ],
+  "pressureFunnelFieldContract": {
+    "contractVersion": "pressure-funnel-field/1.0.0",
+    "universalAcrossAllTenFunnels": true,
+    "centerlineParameter": "s in [0,1], oriented from outer boundary to reference eye",
+    "radialCoordinate": "rho in [0,R_i(s)] measured in the local N/B plane",
+    "azimuthalCoordinate": "phi about local tangent T",
+    "radiusEquation": "R_i(s)=R_eye+(R_outer-R_eye)*(1-s)^alpha",
+    "potentialEquation": "P_i(s,rho)=P_eye+DeltaP*(1-s)+0.5*k_rho*(rho/R_i(s))^2",
+    "forceDensityDefinition": "f_i=-gradient(P_i) in the funnel's transported T/N/B frame",
+    "velocityDefinition": "v_i=u_parallel*T+u_helix*e_phi",
+    "longitudinalComponent": "u_parallel=u0*(R_outer/R_i(s))^2*(1-(rho/R_i(s))^2)",
+    "helicalComponent": "u_helix=h_i*omega0*rho*(1-(rho/R_i(s))^2)",
+    "momentumDensity": "pi_i=rho_mass*v_i",
+    "kineticEnergyDensity": "e_k_i=0.5*rho_mass*dot(v_i,v_i)",
+    "totalReducedEnergyDensity": "e_i=P_i+e_k_i",
+    "geometryReproductionParameters": {
+      "outerRadius": 0.22,
+      "eyeRadius": 0.055,
+      "taperExponent": 1.35,
+      "status": "frozen as rendered geometry only"
+    },
+    "unapprovedDevelopmentPlaceholders": {
+      "eyePotential": 0.0,
+      "longitudinalPotentialDrop": 1.0,
+      "radialConfinement": 0.42,
+      "massDensity": 1.0,
+      "baseLongitudinalSpeed": 0.18,
+      "baseAngularSpeed": 1.4,
+      "ownerApproved": false,
+      "mayBeUsedOnlyForPublicPhase1Development": true
+    },
+    "dynamicalLawOwnerApproved": false,
+    "broadensTowardOuterBoundary": true,
+    "narrowsTowardReferenceEye": true,
+    "directRepresentativePointToEyeForcePermitted": false,
+    "movingEyeMayRetargetCenterline": false
+  },
+  "mobileCores": [
+    {
+      "id": "upper-eye",
+      "cell": "upper",
+      "memberRole": "mobile-organizing-eddy",
+      "position": [
+        0.0,
+        0.0,
+        0.72
+      ],
+      "handedness": -1,
+      "handednessName": "left",
+      "mobilityEnvelopeRadius": 0.28,
+      "isPinned": false
+    },
+    {
+      "id": "lower-eye",
+      "cell": "lower",
+      "memberRole": "mobile-organizing-eddy",
+      "position": [
+        0.0,
+        0.0,
+        -0.72
+      ],
+      "handedness": 1,
+      "handednessName": "right",
+      "mobilityEnvelopeRadius": 0.28,
+      "isPinned": false
+    }
+  ],
+  "spine": {
+    "spineNodeCount": 3,
+    "spineLinkCount": 2,
+    "hingeCount": 1,
+    "nodes": [
+      {
+        "id": "upper-eye",
+        "role": "upper-eye",
+        "position": [
+          0.0,
+          0.0,
+          0.72
+        ]
+      },
+      {
+        "id": "central-junction",
+        "role": "free-internal-hinge",
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "id": "lower-eye",
+        "role": "lower-eye",
+        "position": [
+          0.0,
+          0.0,
+          -0.72
+        ]
+      }
+    ],
+    "links": [
+      {
+        "id": "upper-spine-link",
+        "from": "upper-eye",
+        "to": "central-junction",
+        "length": 0.72,
+        "lengthConstraint": "fixed"
+      },
+      {
+        "id": "lower-spine-link",
+        "from": "central-junction",
+        "to": "lower-eye",
+        "length": 0.72,
+        "lengthConstraint": "fixed"
+      }
+    ],
+    "hinges": [
+      {
+        "id": "central-free-hinge",
+        "nodeId": "central-junction",
+        "type": "free-internal-hinge",
+        "angleRestoringSpring": false,
+        "preferredWorldAxis": false
+      }
+    ]
+  },
+  "nips": [
+    {
+      "id": "upper-nip",
+      "position": [
+        0.0,
+        0.0,
+        0.3312
+      ],
+      "belongsTo": "single-integrated-field",
+      "isIndependentHub": false
+    },
+    {
+      "id": "lower-nip",
+      "position": [
+        0.0,
+        0.0,
+        -0.3312
+      ],
+      "belongsTo": "single-integrated-field",
+      "isIndependentHub": false
+    }
+  ],
+  "derivedIntegratedWhole": {
+    "id": "apparent-axis",
+    "count": 1,
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "derivedFrom": [
+      "upper-eye",
+      "central-junction",
+      "lower-eye"
+    ],
+    "isAdditionalNode": false,
+    "preferredWorldAxis": false
+  },
+  "overlapRule": {
+    "pairDomain": "cross-cell peripheral-funnel pairs only",
+    "distanceThreshold": 0.37,
+    "selectionRule": "mutual nearest cross-cell curves under the threshold",
+    "maximumSparseOverlaps": 5,
+    "frameConvention": "right-handed columns [tangent, normal, binormal]",
+    "weightRule": "exp(-(distance/0.37)^2) * (0.5 + 0.5*abs(dot(tangentA,tangentB)))"
+  },
+  "overlapFrameTransportRule": {
+    "id": "local-frame-overlap-transport-v1",
+    "sourceFrame": "F_A=[T_A,N_A,B_A]",
+    "destinationFrame": "F_B=[T_B,N_B,B_B]",
+    "componentMap": "M_AtoB=transpose(F_B)*F_A",
+    "transport": "q_B_received=w_AB*M_AtoB*q_A",
+    "phaseTransport": "phase is advanced by the oriented local-frame rotation; no world-axis phase is used",
+    "energyAccounting": "unweighted frame rotation preserves vector norm; overlap weight and any loss are logged separately",
+    "worldAxesUsed": false,
+    "arrayIndicesUsed": false
+  },
+  "overlaps": [
+    {
+      "id": "overlap-01",
+      "flowA": "U4",
+      "flowB": "L4",
+      "coordinate": [
+        -0.341687915,
+        -0.4702930687,
+        0.0
+      ],
+      "distance": 0.173191204,
+      "curveParameterA": 0.5,
+      "curveParameterB": 0.5,
+      "localFrameA": {
+        "tangent": [
+          0.7193259809,
+          0.5226209166,
+          0.4576434318
+        ],
+        "normal": [
+          -0.6130382932,
+          0.1677173985,
+          0.7720459347
+        ],
+        "binormal": [
+          0.3267325882,
+          -0.8359056476,
+          0.4410301169
+        ]
+      },
+      "localFrameB": {
+        "tangent": [
+          0.2747580757,
+          0.8456184063,
+          -0.4576434318
+        ],
+        "normal": [
+          0.3489479756,
+          -0.5312065371,
+          -0.7720459347
+        ],
+        "binormal": [
+          -0.8959594356,
+          0.0524321063,
+          -0.4410301169
+        ]
+      },
+      "overlapFrameTransformAtoB": [
+        [
+          0.4301409783,
+          -0.3799340536,
+          -0.8189193206
+        ],
+        [
+          -0.3799340536,
+          -0.8990659751,
+          0.2175557108
+        ],
+        [
+          -0.8189193206,
+          0.2175557108,
+          -0.5310750032
+        ]
+      ],
+      "weight": 0.5743725222
+    },
+    {
+      "id": "overlap-02",
+      "flowA": "U1",
+      "flowB": "L1",
+      "coordinate": [
+        0.55286266,
+        0.1796359676,
+        0.0
+      ],
+      "distance": 0.173191204,
+      "curveParameterA": 0.5,
+      "curveParameterB": 0.5,
+      "localFrameA": {
+        "tangent": [
+          -0.8891358104,
+          0.0,
+          0.4576434318
+        ],
+        "normal": [
+          0.397376584,
+          -0.4960210935,
+          0.7720459347
+        ],
+        "binormal": [
+          0.2270007955,
+          0.8683104714,
+          0.4410301169
+        ]
+      },
+      "localFrameB": {
+        "tangent": [
+          -0.7193259809,
+          -0.5226209166,
+          -0.4576434318
+        ],
+        "normal": [
+          0.0299305261,
+          0.6348615899,
+          -0.7720459347
+        ],
+        "binormal": [
+          0.6940275908,
+          -0.5690502079,
+          -0.4410301169
+        ]
+      },
+      "overlapFrameTransformAtoB": [
+        [
+          0.4301409783,
+          -0.3799340536,
+          -0.8189193206
+        ],
+        [
+          -0.3799340536,
+          -0.8990659751,
+          0.2175557108
+        ],
+        [
+          -0.8189193206,
+          0.2175557108,
+          -0.5310750032
+        ]
+      ],
+      "weight": 0.5743725222
+    },
+    {
+      "id": "overlap-03",
+      "flowA": "U3",
+      "flowB": "L3",
+      "coordinate": [
+        -0.55286266,
+        0.1796359676,
+        0.0
+      ],
+      "distance": 0.173191204,
+      "curveParameterA": 0.5,
+      "curveParameterB": 0.5,
+      "localFrameA": {
+        "tangent": [
+          0.7193259809,
+          -0.5226209166,
+          0.4576434318
+        ],
+        "normal": [
+          -0.0299305261,
+          0.6348615899,
+          0.7720459347
+        ],
+        "binormal": [
+          -0.6940275908,
+          -0.5690502079,
+          0.4410301169
+        ]
+      },
+      "localFrameB": {
+        "tangent": [
+          0.8891358104,
+          0.0,
+          -0.4576434318
+        ],
+        "normal": [
+          -0.397376584,
+          -0.4960210935,
+          -0.7720459347
+        ],
+        "binormal": [
+          -0.2270007955,
+          0.8683104714,
+          -0.4410301169
+        ]
+      },
+      "overlapFrameTransformAtoB": [
+        [
+          0.4301409783,
+          -0.3799340536,
+          -0.8189193206
+        ],
+        [
+          -0.3799340536,
+          -0.8990659751,
+          0.2175557108
+        ],
+        [
+          -0.8189193206,
+          0.2175557108,
+          -0.5310750032
+        ]
+      ],
+      "weight": 0.5743725222
+    },
+    {
+      "id": "overlap-04",
+      "flowA": "U5",
+      "flowB": "L5",
+      "coordinate": [
+        0.341687915,
+        -0.4702930687,
+        0.0
+      ],
+      "distance": 0.173191204,
+      "curveParameterA": 0.5,
+      "curveParameterB": 0.5,
+      "localFrameA": {
+        "tangent": [
+          -0.2747580757,
+          0.8456184063,
+          0.4576434318
+        ],
+        "normal": [
+          -0.3489479756,
+          -0.5312065371,
+          0.7720459347
+        ],
+        "binormal": [
+          0.8959594356,
+          0.0524321063,
+          0.4410301169
+        ]
+      },
+      "localFrameB": {
+        "tangent": [
+          -0.7193259809,
+          0.5226209166,
+          -0.4576434318
+        ],
+        "normal": [
+          0.6130382932,
+          0.1677173985,
+          -0.7720459347
+        ],
+        "binormal": [
+          -0.3267325882,
+          -0.8359056476,
+          -0.4410301169
+        ]
+      },
+      "overlapFrameTransformAtoB": [
+        [
+          0.4301409783,
+          -0.3799340536,
+          -0.8189193206
+        ],
+        [
+          -0.3799340536,
+          -0.8990659751,
+          0.2175557108
+        ],
+        [
+          -0.8189193206,
+          0.2175557108,
+          -0.5310750032
+        ]
+      ],
+      "weight": 0.5743725222
+    },
+    {
+      "id": "overlap-05",
+      "flowA": "U2",
+      "flowB": "L2",
+      "coordinate": [
+        0.0,
+        0.5813142022,
+        0.0
+      ],
+      "distance": 0.173191204,
+      "curveParameterA": 0.5,
+      "curveParameterB": 0.5,
+      "localFrameA": {
+        "tangent": [
+          -0.2747580757,
+          -0.8456184063,
+          0.4576434318
+        ],
+        "normal": [
+          0.5945402108,
+          0.2246486422,
+          0.7720459347
+        ],
+        "binormal": [
+          -0.7556652285,
+          0.4842132778,
+          0.4410301169
+        ]
+      },
+      "localFrameB": {
+        "tangent": [
+          0.2747580757,
+          -0.8456184063,
+          -0.4576434318
+        ],
+        "normal": [
+          -0.5945402108,
+          0.2246486422,
+          -0.7720459347
+        ],
+        "binormal": [
+          0.7556652285,
+          0.4842132778,
+          -0.4410301169
+        ]
+      },
+      "overlapFrameTransformAtoB": [
+        [
+          0.4301409783,
+          -0.3799340536,
+          -0.8189193206
+        ],
+        [
+          -0.3799340536,
+          -0.8990659751,
+          0.2175557108
+        ],
+        [
+          -0.8189193206,
+          0.2175557108,
+          -0.5310750032
+        ]
+      ],
+      "weight": 0.5743725222
+    }
+  ],
+  "graphEdges": [
+    {
+      "id": "upper-crown-edge-1",
+      "kind": "peripheral-crown-adjacency",
+      "from": "U1",
+      "to": "U2",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-crown-edge-2",
+      "kind": "peripheral-crown-adjacency",
+      "from": "U2",
+      "to": "U3",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-crown-edge-3",
+      "kind": "peripheral-crown-adjacency",
+      "from": "U3",
+      "to": "U4",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-crown-edge-4",
+      "kind": "peripheral-crown-adjacency",
+      "from": "U4",
+      "to": "U5",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-crown-edge-5",
+      "kind": "peripheral-crown-adjacency",
+      "from": "U5",
+      "to": "U1",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-eye-edge-1",
+      "kind": "five-plus-one-membership",
+      "from": "U1",
+      "to": "upper-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-eye-edge-2",
+      "kind": "five-plus-one-membership",
+      "from": "U2",
+      "to": "upper-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-eye-edge-3",
+      "kind": "five-plus-one-membership",
+      "from": "U3",
+      "to": "upper-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-eye-edge-4",
+      "kind": "five-plus-one-membership",
+      "from": "U4",
+      "to": "upper-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "upper-eye-edge-5",
+      "kind": "five-plus-one-membership",
+      "from": "U5",
+      "to": "upper-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-crown-edge-1",
+      "kind": "peripheral-crown-adjacency",
+      "from": "L1",
+      "to": "L2",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-crown-edge-2",
+      "kind": "peripheral-crown-adjacency",
+      "from": "L2",
+      "to": "L3",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-crown-edge-3",
+      "kind": "peripheral-crown-adjacency",
+      "from": "L3",
+      "to": "L4",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-crown-edge-4",
+      "kind": "peripheral-crown-adjacency",
+      "from": "L4",
+      "to": "L5",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-crown-edge-5",
+      "kind": "peripheral-crown-adjacency",
+      "from": "L5",
+      "to": "L1",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-eye-edge-1",
+      "kind": "five-plus-one-membership",
+      "from": "L1",
+      "to": "lower-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-eye-edge-2",
+      "kind": "five-plus-one-membership",
+      "from": "L2",
+      "to": "lower-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-eye-edge-3",
+      "kind": "five-plus-one-membership",
+      "from": "L3",
+      "to": "lower-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-eye-edge-4",
+      "kind": "five-plus-one-membership",
+      "from": "L4",
+      "to": "lower-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "lower-eye-edge-5",
+      "kind": "five-plus-one-membership",
+      "from": "L5",
+      "to": "lower-eye",
+      "weight": 1.0
+    },
+    {
+      "id": "graph-overlap-01",
+      "kind": "cross-cell-overlap",
+      "from": "U4",
+      "to": "L4",
+      "weight": 0.5743725222
+    },
+    {
+      "id": "graph-overlap-02",
+      "kind": "cross-cell-overlap",
+      "from": "U1",
+      "to": "L1",
+      "weight": 0.5743725222
+    },
+    {
+      "id": "graph-overlap-03",
+      "kind": "cross-cell-overlap",
+      "from": "U3",
+      "to": "L3",
+      "weight": 0.5743725222
+    },
+    {
+      "id": "graph-overlap-04",
+      "kind": "cross-cell-overlap",
+      "from": "U5",
+      "to": "L5",
+      "weight": 0.5743725222
+    },
+    {
+      "id": "graph-overlap-05",
+      "kind": "cross-cell-overlap",
+      "from": "U2",
+      "to": "L2",
+      "weight": 0.5743725222
+    },
+    {
+      "id": "graph-upper-spine-link",
+      "kind": "fixed-length-spine-link",
+      "from": "upper-eye",
+      "to": "central-junction",
+      "weight": 1.0
+    },
+    {
+      "id": "graph-lower-spine-link",
+      "kind": "fixed-length-spine-link",
+      "from": "central-junction",
+      "to": "lower-eye",
+      "weight": 1.0
+    }
+  ],
+  "parentToroidalBoundary": {
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "majorRadius": 1.36,
+    "minorRadius": 0.44,
+    "circulationHandedness": 1,
+    "isDynamical": false
+  },
+  "phase1MobileEyeIsolationContract": {
+    "enabledGeometry": "one fixed five-funnel crown plus one independent mobile eye",
+    "disabled": {
+      "otherCell": true,
+      "spine": true,
+      "nips": true,
+      "activeParentToroidalBoundary": true,
+      "torusWallCollisions": true
+    },
+    "mobileEyeState": [
+      "position",
+      "velocity",
+      "inertia",
+      "optionalIntrinsicSpin"
+    ],
+    "crownCenterlinesRemainFixedInCrownFrame": true,
+    "crownMayRedrawRotateOrRetargetToMovingEye": false,
+    "crownFieldMayReadEyeDisplacement": false,
+    "radialCenteringSpring": false,
+    "movingTargetPotential": false,
+    "coordinateOriginAttraction": false,
+    "directRestoringForce": false,
+    "hiddenPositionReset": false,
+    "containmentSource": "local resultant of the declared fixed pressure-funnel fields only"
+  },
+  "downstreamHypothesisBoundary": {
+    "hydrogenInterpretation": "not tested",
+    "matterModel": "not claimed"
+  },
+  "geometryHash": "81f6f30a82db279ca7c7663199628084bcc8ea369c02f7dcdf45a91f5948de00",
+  "constructionInvariance": {
+    "auditFile": "invariance-result.json",
+    "passed": true,
+    "tolerance": 1e-08
+  }
+}

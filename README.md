@@ -1,6 +1,6 @@
 # Fruckenstein
 
-Fruckenstein is a public research build of three physically embodied â€œcrown ducksâ€ learning and acting together in one MuJoCo world.
+Fruckenstein is a public research build of three physically embodied “crown ducks” learning and acting together in one MuJoCo world.
 
 The ducks walk with a coordinated inherited gait, but steering, confidence, appetite, nociception, vitality, memory, and target choice are coupled through relational state. They collide with one another, can knock one another down, consume replenishing apples, preserve body-specific memory between runs, and can be tested through gated generations.
 
@@ -51,16 +51,16 @@ The build does **not** claim consciousness, emotion, subjective pain, biological
 
 ```text
 body sensors and contact
-        â†“
+        ↓
 relational pressure + reliability
-        â†“
+        ↓
 null-preserving 27-voxel evidence field
-        â†“
+        ↓
 Candidate-0003 commit-or-refuse crown
-        â†“
+        ↓
 whole-gait enactment and bounded trim
-        â†“
-measured consequence â†’ persistent body ledger
+        ↓
+measured consequence → persistent body ledger
 ```
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the technical breakdown.
@@ -93,7 +93,7 @@ These are project-reported simulation results under the recorded conditions, not
 
 ## Provenance and rights
 
-Human conception and project direction: James Sterling Tuttle (â€œVâ€), Alpha Data Omega.
+Human conception and project direction: James Sterling Tuttle (“V”), Alpha Data Omega.
 
 AI systems assisted with implementation, testing, analysis, packaging, and documentation as tools. They are not asserted as inventors or owners.
 
@@ -101,8 +101,7 @@ See [docs/PROVENANCE.md](docs/PROVENANCE.md),
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and
 [SHA256SUMS.txt](SHA256SUMS.txt).
 
-Copyright Â© 2026 James Sterling Tuttle / Alpha Data Omega. All rights reserved
+Copyright © 2026 James Sterling Tuttle / Alpha Data Omega. All rights reserved
 for original Fruckenstein materials. Public visibility does not grant a patent
 license, commercial license, or permission to redistribute modified binaries.
 Third-party components retain their own licenses.
-

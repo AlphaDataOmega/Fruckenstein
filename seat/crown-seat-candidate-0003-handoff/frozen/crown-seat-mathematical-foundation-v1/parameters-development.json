@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "crown-seat-development-parameters/1.0.0",
+  "candidate": "candidate-0003",
+  "status": "public-development-only",
+  "parameters": {
+    "decay": 0.82,
+    "axial_decay": 0.46,
+    "saturation": 0.34,
+    "axial_saturation": 0.22,
+    "ring_coupling": 1.05,
+    "overlap_coupling": 0.72,
+    "eye_coupling": 0.88,
+    "spine_coupling": 0.66,
+    "bridge_coupling": 0.22,
+    "input_gain": 1.45,
+    "transverse_input_fraction": 0.08,
+    "handed_precession": 0.18,
+    "dense_pair_weight": 0.16,
+    "coherence_threshold": 0.54,
+    "confidence_threshold": 0.40,
+    "strength_threshold": 0.035,
+    "dt": 0.02
+  },
+  "units": "declared reduced simulation units",
+  "frozenForHiddenEvaluation": false
+}

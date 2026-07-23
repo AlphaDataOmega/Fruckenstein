@@ -1,0 +1,1242 @@
+{
+  "status": "checkpoint-complete",
+  "definition": "fresh bodies; shared parent inheritance; candidate selection by food, survival, and physical stability",
+  "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\outputs\\RelationalDuckGroupData",
+  "generationsRequested": 3,
+  "candidatesPerGeneration": 3,
+  "stepsPerLifetime": 3600,
+  "crowns": true,
+  "crownPeriod": 5,
+  "generations": [
+    {
+      "generation": 1,
+      "promoted": true,
+      "winner": 1,
+      "winnerScore": 236.32496839342022,
+      "candidates": [
+        {
+          "candidate": 1,
+          "seed": 114349,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-01\\candidate-01",
+          "steps": 3600,
+          "elapsedSeconds": 81.98998951911926,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 236.32496839342022,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 123,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9350811455486528,
+            0.9569151985689293,
+            0.9485615925584064
+          ],
+          "meanVitality": 0.8873459088650533,
+          "meanPain": 0.05151741595782558,
+          "trims": [
+            -0.27636120884244453,
+            -0.1827105627526657,
+            -0.3133041130968138
+          ],
+          "gaitEnactments": [
+            0.4399986938858469,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.06787869484051563,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": 0.08166710480807159,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.009216541474517823,
+              "leftDirect": 0.09062510104766168,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.0056343300093042266,
+              "leftDirect": 0.0027610179196619865,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 552,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.4399986938858469,
+              "steeringTrim": -0.27636120884244453,
+              "effects": {
+                "forward": -0.06787869484051563,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.08166710480807159,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999821,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999998503,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 553,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.1827105627526657,
+              "effects": {
+                "forward": -0.009216541474517823,
+                "leftDirect": 0.09062510104766168,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999831,
+                "leftDirect": 0.9999999999921785,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 552,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.3133041130968138,
+              "effects": {
+                "forward": -0.0056343300093042266,
+                "leftDirect": 0.0027610179196619865,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999821,
+                "leftDirect": 0.9999999998366389,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "candidate": 2,
+          "seed": 219078,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-01\\candidate-02",
+          "steps": 3600,
+          "elapsedSeconds": 82.0188639163971,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 236.21989218771864,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 75,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9302378830513057,
+            0.9627337887104306,
+            0.9481765471070387
+          ],
+          "meanVitality": 0.8873861624895986,
+          "meanPain": 0.055347326172424605,
+          "trims": [
+            -0.2859500403774431,
+            -0.1616568136414571,
+            -0.27637461374490185
+          ],
+          "gaitEnactments": [
+            0.4399993049436391,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.03872053923649952,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": -0.005495665952628366,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.008002233356071744,
+              "leftDirect": -0.0544211374732956,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.03850689591775278,
+              "leftDirect": 0.017928400714895192,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 553,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.4399993049436391,
+              "steeringTrim": -0.2859500403774431,
+              "effects": {
+                "forward": -0.03872053923649952,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": -0.005495665952628366,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999831,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999998666,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 552,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.1616568136414571,
+              "effects": {
+                "forward": -0.008002233356071744,
+                "leftDirect": -0.0544211374732956,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999821,
+                "leftDirect": 0.9999999999921785,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 552,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.27637461374490185,
+              "effects": {
+                "forward": -0.03850689591775278,
+                "leftDirect": 0.017928400714895192,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999821,
+                "leftDirect": 0.999999999902496,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "candidate": 3,
+          "seed": 323807,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-01\\candidate-03",
+          "steps": 3600,
+          "elapsedSeconds": 81.92486214637756,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 235.98307990199424,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 197,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9338348962999614,
+            0.957304371868417,
+            0.9494954272954654
+          ],
+          "meanVitality": 0.886947324963938,
+          "meanPain": 0.07294770401894247,
+          "trims": [
+            -0.2758138265422502,
+            -0.15459264782265786,
+            -0.28670097708619685
+          ],
+          "gaitEnactments": [
+            0.4399988658810357,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.06227560318692458,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": -0.017392014416389562,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.004560666241934908,
+              "leftDirect": -0.04893647427010349,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.03575813234174105,
+              "leftDirect": -0.10806777858085244,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 553,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.4399988658810357,
+              "steeringTrim": -0.2758138265422502,
+              "effects": {
+                "forward": -0.06227560318692458,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": -0.017392014416389562,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999831,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999998587,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 552,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.15459264782265786,
+              "effects": {
+                "forward": -0.004560666241934908,
+                "leftDirect": -0.04893647427010349,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999821,
+                "leftDirect": 0.9999999999921785,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 552,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.28670097708619685,
+              "effects": {
+                "forward": -0.03575813234174105,
+                "leftDirect": -0.10806777858085244,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999821,
+                "leftDirect": 0.9999999998701216,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "generation": 2,
+      "promoted": true,
+      "winner": 3,
+      "winnerScore": 236.60056024043246,
+      "candidates": [
+        {
+          "candidate": 1,
+          "seed": 122268,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-02\\candidate-01",
+          "steps": 3600,
+          "elapsedSeconds": 77.99218893051147,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 235.449563252199,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 209,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9297374831542843,
+            0.9541990731745008,
+            0.9496806773819281
+          ],
+          "meanVitality": 0.8850489245995727,
+          "meanPain": 0.10325267142235274,
+          "trims": [
+            -0.29293877214212294,
+            -0.19846858488944225,
+            -0.33768605920622385
+          ],
+          "gaitEnactments": [
+            0.43999754561582965,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": 0.006104486057550403,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": -0.023389342554738516,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.000423275093093125,
+              "leftDirect": -0.018793373222546803,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": 0.00969566415415443,
+              "leftDirect": -0.16318532538124395,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 684,
+              "apples": 2,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999754561582965,
+              "steeringTrim": -0.29293877214212294,
+              "effects": {
+                "forward": 0.006104486057550403,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": -0.023389342554738516,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999999991,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 686,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.19846858488944225,
+              "effects": {
+                "forward": -0.000423275093093125,
+                "leftDirect": -0.018793373222546803,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.999999999999994,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 684,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.33768605920622385,
+              "effects": {
+                "forward": 0.00969566415415443,
+                "leftDirect": -0.16318532538124395,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999990627,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "candidate": 2,
+          "seed": 226997,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-02\\candidate-02",
+          "steps": 3600,
+          "elapsedSeconds": 77.59185886383057,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 233.75012582453073,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 94,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9294305700612429,
+            0.9544928694111835,
+            0.9441380910125058
+          ],
+          "meanVitality": 0.8872333072881714,
+          "meanPain": 0.21925640145634118,
+          "trims": [
+            -0.3001611399682034,
+            -0.19411570190665872,
+            -0.2555255059800614
+          ],
+          "gaitEnactments": [
+            0.4399991862132902,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.009809796991249448,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": -0.014585834478477347,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.013826198254818513,
+              "leftDirect": 0.07721425306822277,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.04660514234304335,
+              "leftDirect": -0.024985712443221925,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 684,
+              "apples": 2,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.4399991862132902,
+              "steeringTrim": -0.3001611399682034,
+              "effects": {
+                "forward": -0.009809796991249448,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": -0.014585834478477347,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999999991,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 686,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.19411570190665872,
+              "effects": {
+                "forward": -0.013826198254818513,
+                "leftDirect": 0.07721425306822277,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.999999999999994,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 685,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.2555255059800614,
+              "effects": {
+                "forward": -0.04660514234304335,
+                "leftDirect": -0.024985712443221925,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999876259,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "candidate": 3,
+          "seed": 331726,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-02\\candidate-03",
+          "steps": 3600,
+          "elapsedSeconds": 77.64795923233032,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 236.60056024043246,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 71,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9300216478492692,
+            0.9634116160906966,
+            0.947712309024355
+          ],
+          "meanVitality": 0.8873564671223905,
+          "meanPain": 0.0297857053672026,
+          "trims": [
+            -0.30480226774588454,
+            -0.16282129303417434,
+            -0.3134410993046908
+          ],
+          "gaitEnactments": [
+            0.4399990472018149,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.020525861172849064,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": -0.009202941513063084,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.007314080670126735,
+              "leftDirect": -0.035740931564623116,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.03171921847282341,
+              "leftDirect": 0.019137649592925455,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 685,
+              "apples": 2,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.4399990472018149,
+              "steeringTrim": -0.30480226774588454,
+              "effects": {
+                "forward": -0.020525861172849064,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": -0.009202941513063084,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999999991,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 685,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.16282129303417434,
+              "effects": {
+                "forward": -0.007314080670126735,
+                "leftDirect": -0.035740931564623116,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999999933,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 684,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.3134410993046908,
+              "effects": {
+                "forward": -0.03171921847282341,
+                "leftDirect": 0.019137649592925455,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999994076,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "promoted": true,
+      "winner": 1,
+      "winnerScore": 236.36951508163747,
+      "candidates": [
+        {
+          "candidate": 1,
+          "seed": 130187,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-03\\candidate-01",
+          "steps": 3600,
+          "elapsedSeconds": 78.81842875480652,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 236.36951508163747,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 70,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9279945434284858,
+            0.9606311359788416,
+            0.9443851247670668
+          ],
+          "meanVitality": 0.8874223333524984,
+          "meanPain": 0.04392513464648931,
+          "trims": [
+            -0.32276417147707104,
+            -0.17342510724642418,
+            -0.2985048356588746
+          ],
+          "gaitEnactments": [
+            0.43999888444368107,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.006164434137870212,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": -3.857777130730766e-08,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.011517675554528291,
+              "leftDirect": 0.036820110400894696,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.03295410317126449,
+              "leftDirect": 0.019137649592925455,
+              "leftReverse": 0.0,
+              "rightDirect": 0.03836892777414896,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 817,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999888444368107,
+              "steeringTrim": -0.32276417147707104,
+              "effects": {
+                "forward": -0.006164434137870212,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": -3.857777130730766e-08,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999999991,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 818,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.17342510724642418,
+              "effects": {
+                "forward": -0.011517675554528291,
+                "leftDirect": 0.036820110400894696,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999999991,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 817,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.2985048356588746,
+              "effects": {
+                "forward": -0.03295410317126449,
+                "leftDirect": 0.019137649592925455,
+                "leftReverse": 0.0,
+                "rightDirect": 0.03836892777414896,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999994076,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9914284994374833,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "candidate": 2,
+          "seed": 234916,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-03\\candidate-02",
+          "steps": 3600,
+          "elapsedSeconds": 78.6846399307251,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 234.09172948952306,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 54,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9306360702533812,
+            0.9594572166639697,
+            0.9486655835748171
+          ],
+          "meanVitality": 0.8866431827579272,
+          "meanPain": 0.196499657877954,
+          "trims": [
+            -0.3211961552560065,
+            -0.17361024367614764,
+            -0.3125334058635184
+          ],
+          "gaitEnactments": [
+            0.43999712635724275,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": -0.0235154015327932,
+              "leftDirect": 0.0,
+              "leftReverse": 0.0,
+              "rightDirect": 0.027867619368352168,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.013279827531933628,
+              "leftDirect": 0.058031808380164196,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.017938480464236378,
+              "leftDirect": -0.01937763250577476,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 817,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999712635724275,
+              "steeringTrim": -0.3211961552560065,
+              "effects": {
+                "forward": -0.0235154015327932,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.027867619368352168,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.0,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999999991,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 817,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.17361024367614764,
+              "effects": {
+                "forward": -0.013279827531933628,
+                "leftDirect": 0.058031808380164196,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999999991,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 816,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.3125334058635184,
+              "effects": {
+                "forward": -0.017938480464236378,
+                "leftDirect": -0.01937763250577476,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999999971,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        },
+        {
+          "candidate": 3,
+          "seed": 339645,
+          "ledger": "C:\\Users\\Digital Media\\Documents\\Codex\\2026-07-22\\hin\\.build\\group-high-bake-20260722-234500\\generation-03\\candidate-03",
+          "steps": 3600,
+          "elapsedSeconds": 78.6676573753357,
+          "accepted": true,
+          "gate": {
+            "finite": true,
+            "allAlive": true,
+            "ate": true,
+            "noFalls": true,
+            "upright": true,
+            "painBounded": true,
+            "gaitBounded": true,
+            "trimBounded": true
+          },
+          "score": 236.0274148113388,
+          "living": 3,
+          "apples": 1,
+          "falls": 0,
+          "deaths": 0,
+          "contacts": 131,
+          "knockdowns": 0,
+          "minimumUpright": [
+            0.9290504679473373,
+            0.95884291636948,
+            0.947199329801097
+          ],
+          "meanVitality": 0.8868212509765346,
+          "meanPain": 0.066634325844351,
+          "trims": [
+            -0.33461370671120283,
+            -0.16935747930671616,
+            -0.30819374270779826
+          ],
+          "gaitEnactments": [
+            0.4399984707738839,
+            0.44,
+            0.43999999999999984
+          ],
+          "effects": [
+            {
+              "forward": 0.01272987113414693,
+              "leftDirect": -0.02423373491913846,
+              "leftReverse": 0.0,
+              "rightDirect": 0.054440910581104056,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.03659754802603994,
+              "leftDirect": -0.002663941270208482,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            },
+            {
+              "forward": -0.035739763309250716,
+              "leftDirect": -0.03131454392094098,
+              "leftReverse": 0.0,
+              "rightDirect": 0.0,
+              "rightReverse": 0.0
+            }
+          ],
+          "bodyMemory": [
+            {
+              "cycles": 817,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.4399984707738839,
+              "steeringTrim": -0.33461370671120283,
+              "effects": {
+                "forward": 0.01272987113414693,
+                "leftDirect": -0.02423373491913846,
+                "leftReverse": 0.0,
+                "rightDirect": 0.054440910581104056,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.33060957784559764,
+                "leftReverse": 0.0,
+                "rightDirect": 0.9999999999999991,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 817,
+              "apples": 1,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.44,
+              "steeringTrim": -0.16935747930671616,
+              "effects": {
+                "forward": -0.03659754802603994,
+                "leftDirect": -0.002663941270208482,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999999991,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            },
+            {
+              "cycles": 816,
+              "apples": 3,
+              "falls": 0,
+              "deaths": 0,
+              "gaitEnactment": 0.43999999999999984,
+              "steeringTrim": -0.30819374270779826,
+              "effects": {
+                "forward": -0.035739763309250716,
+                "leftDirect": -0.03131454392094098,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              },
+              "support": {
+                "forward": 0.9999999999999991,
+                "leftDirect": 0.9999999999999977,
+                "leftReverse": 0.0,
+                "rightDirect": 0.0,
+                "rightReverse": 0.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elapsedSeconds": 242.26557660102844,
+  "summary": {
+    "generations": 3,
+    "promotions": 3,
+    "candidateLifetimes": 9,
+    "duckLifetimes": 27,
+    "selectedApples": 3,
+    "selectedFalls": 0
+  }
+}

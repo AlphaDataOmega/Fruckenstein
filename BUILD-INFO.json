@@ -1,0 +1,29 @@
+{
+  "name": "Fruckenstein",
+  "preparedAt": "2026-07-23T08:41:39-05:00",
+  "platform": "Windows x86-64",
+  "entryPoint": "src/fruckenstein/group_ducks_standalone.py",
+  "runtime": {
+    "python": "3.11+",
+    "mujoco": "3.10.0"
+  },
+  "release": {
+    "path": "release/Fruckenstein-Windows-x64.exe",
+    "bytes": 38779382,
+    "sha256": "607b30bcbf86452c28742a647b3c36b6c5850d640e316430da90e43f761e708b",
+    "codeSigned": false
+  },
+  "simulation": {
+    "ducks": 3,
+    "apples": 7,
+    "crownPeriod": 5,
+    "fastLoopHzApprox": 50,
+    "persistentMemory": true,
+    "physicalBodyContact": true
+  },
+  "evidence": {
+    "bakeReport": "experiments/bake-report.json",
+    "crownConformance": "docs/CROWN-CONFORMANCE.md",
+    "checksums": "SHA256SUMS.txt"
+  }
+}
