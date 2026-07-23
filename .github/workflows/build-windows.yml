@@ -1,0 +1,81 @@
+name: Build Windows release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/build-windows.yml"
+      - "Fruckenstein.spec"
+      - "requirements.txt"
+      - "src/**"
+      - "seat/**"
+      - "duck/**"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pyinstaller
+
+      - name: Run headless smoke test
+        shell: pwsh
+        run: |
+          $env:WATCH = "0"
+          $env:N = "20"
+          $env:GROUP_MEMORY = "0"
+          python src/fruckenstein/group_ducks.py
+
+      - name: Build windowed executable
+        run: pyinstaller --noconfirm --clean Fruckenstein.spec
+
+      - name: Write release checksum
+        shell: pwsh
+        run: |
+          $exe = "dist/Fruckenstein-Windows-x64.exe"
+          if (-not (Test-Path -LiteralPath $exe)) {
+            throw "Expected executable was not produced: $exe"
+          }
+          $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $exe).Hash.ToLowerInvariant()
+          "$hash  Fruckenstein-Windows-x64.exe" | Set-Content -LiteralPath "dist/SHA256SUMS.txt" -Encoding ascii
+          Write-Host "SHA-256: $hash"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: Fruckenstein-Windows-x64
+          path: |
+            dist/Fruckenstein-Windows-x64.exe
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Publish GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view v0.1.0 --repo "${{ github.repository }}" 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload v0.1.0 "dist/Fruckenstein-Windows-x64.exe" "dist/SHA256SUMS.txt" --repo "${{ github.repository }}" --clobber
+          } else {
+            gh release create v0.1.0 "dist/Fruckenstein-Windows-x64.exe" "dist/SHA256SUMS.txt" --repo "${{ github.repository }}" --target "${{ github.sha }}" --title "Fruckenstein v0.1.0" --notes "Automated Windows build of the published Fruckenstein source. Verify the executable against SHA256SUMS.txt before running."
+          }
