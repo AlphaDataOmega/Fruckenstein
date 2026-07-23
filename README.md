@@ -6,7 +6,7 @@ The ducks walk with a coordinated inherited gait, but steering, confidence, appe
 
 This repository contains:
 
-- the runnable Windows build;
+- a reproducible Windows build published with each release;
 - the controller source and body assets required to reproduce it;
 - the frozen Candidate-0003 crown geometry and checksum boundary;
 - the generational bake report;
@@ -14,9 +14,8 @@ This repository contains:
 
 ## Run the Windows build
 
-Download or open:
-
-`release/Fruckenstein-Windows-x64.exe`
+Download `Fruckenstein-Windows-x64.exe` from the
+[latest GitHub release](https://github.com/AlphaDataOmega/Fruckenstein/releases/latest).
 
 The application opens a non-headless MuJoCo window. Windows may warn because the executable is not code-signed. The build writes learned body memory beside the executable in `RelationalDuckGroupData/`.
 
