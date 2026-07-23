@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - ".github/workflows/build-windows.yml"
+      - ".gitattributes"
       - "Fruckenstein.spec"
       - "requirements.txt"
       - "src/**"
@@ -24,6 +25,12 @@ jobs:
     steps:
       - name: Check out source
         uses: actions/checkout@v7
+
+      - name: Restore byte-exact repository files
+        shell: pwsh
+        run: |
+          git config core.autocrlf false
+          git checkout-index --force --all
 
       - name: Set up Python
         uses: actions/setup-python@v7
