@@ -1,19 +1,16 @@
-AlphaDataOmega
-==============
+AlphaDataOmega — NOTICE
+=======================
 
 Copyright (c) 2026 AlphaDataOmega. All rights reserved.
+Licensor: AlphaDataOmega  (https://github.com/AlphaDataOmega)
 
-This software, together with its associated research, data, models, and
-documentation, is the work of AlphaDataOmega, and is licensed under the
-Apache License, Version 2.0 (see the LICENSE file). Third-party components
-are governed by their own licenses (see THIRD_PARTY_NOTICES.md).
+This work — code, research, data, models, and documentation — is licensed under the
+PolyForm Noncommercial License 1.0.0 (see LICENSE).
 
-ATTRIBUTION REQUIRED
---------------------
-Any use, reproduction, distribution, or derivative work of the AlphaDataOmega
-portions — in whole or in part, including research and commercial use — must
-give clear and visible credit to AlphaDataOmega, must include this NOTICE, and
-must not remove or obscure this attribution. Per Section 4(d) of the Apache
-License 2.0, this NOTICE must be retained and reproduced with any redistribution.
+NONCOMMERCIAL USE ONLY
+----------------------
+Commercial use is NOT permitted. Use, reproduction, distribution, and derivative works
+are allowed for noncommercial purposes only, and MUST give clear, visible credit to
+AlphaDataOmega and retain this NOTICE.
 
-Attribute as: "AlphaDataOmega" — https://github.com/AlphaDataOmega
+Third-party components retain their own licenses — see THIRD_PARTY_NOTICES.md.

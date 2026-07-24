@@ -107,4 +107,4 @@ Third-party components retain their own licenses.
 
 ## License
 
-Apache License 2.0. **Attribution to AlphaDataOmega is required** for any use of the AlphaDataOmega portions, including research and commercial — see [NOTICE](NOTICE). Third-party components retain their own licenses (see THIRD_PARTY_NOTICES.md).
+**PolyForm Noncommercial License 1.0.0** — noncommercial use only. Commercial use is not permitted. Any use must credit **AlphaDataOmega** and retain the NOTICE. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
