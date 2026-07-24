@@ -104,3 +104,7 @@ Copyright © 2026 James Sterling Tuttle / Alpha Data Omega. All rights reserved
 for original Fruckenstein materials. Public visibility does not grant a patent
 license, commercial license, or permission to redistribute modified binaries.
 Third-party components retain their own licenses.
+
+## License
+
+Apache License 2.0. **Attribution to AlphaDataOmega is required** for any use of the AlphaDataOmega portions, including research and commercial — see [NOTICE](NOTICE). Third-party components retain their own licenses (see THIRD_PARTY_NOTICES.md).
